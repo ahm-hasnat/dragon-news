@@ -5,6 +5,8 @@ import Login from '../Pages/Login/Login';
 import Root from '../Pages/Root/Root';
 import Home from '../Pages/Home/Home';
 import CategoryNews from '../Pages/CategoryNews/CategoryNews';
+import Auth from '../Pages/AuthLayout/Auth';
+import Register from '../Pages/Register/Register';
 
 
 const Router = createBrowserRouter([
@@ -13,7 +15,8 @@ const Router = createBrowserRouter([
     Component: Root,
     children: [
       {
-        path: '',
+        index: true,
+        path: '/',
         Component: Home,
       },
       {
@@ -24,8 +27,20 @@ const Router = createBrowserRouter([
     ],
   },
    {
-    path: '/login',
-    Component: Login,
+    path: '/auth',
+    Component: Auth,
+    children:[{
+
+      path: '/auth/login',
+      Component: Login,
+    },
+    {
+
+      path: '/auth/register',
+      Component:Register ,
+    }
+      
+    ]
   }
 ]);
 

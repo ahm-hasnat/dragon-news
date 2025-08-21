@@ -3,7 +3,7 @@ import React from 'react';
 const SocialLogin = () => {
     return (
         <div className='w-full flex flex-col gap-2 items-start'>
-           <h1 className='text-lg font-semibold text-primary mb-2'>Login with</h1> 
+           <h1 className='text-lg font- text-primary mb-2'>Login with</h1> 
 
 
 {/* Google */}
